@@ -1,0 +1,25 @@
+// Roboto Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// custom CSS variables file
+@import "scss/variables.scss";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+}
+
+button {
+
+    &.contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+}
+
