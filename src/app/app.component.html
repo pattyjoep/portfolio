@@ -1,34 +1,63 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let project of projects">
+<div class="row mx-0 p-0">
+  <div class="col-12 p-0">
 
-    <div class="card">
-      <img src="{{ project.image }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{ project.name }}</h5>
-        <p class="card-text">{{ project.description }}</p>
-        
-      </div>
-      <div class="card-footer">
-        <a href="#">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="#">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
+    <!-- Top Mobile Navbar -->
+    <div class="top-nav">
+
+      <img src="../../../assets/photos/avatar_circle.png" alt="Avatar">
+
+      <!-- Hamburger Menu -->
+      <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </button>
+      <!-- End Hamburger Menu -->
+
     </div>
+    <!-- End Top Mobile Navbar -->
 
+    <!-- Side Menu -->
+    <aside id="sideMenu" class="side-menu" [ngClass]="{ 'open': sideMenuOpen === true }">
+      <nav>
+          <img src="../../../assets/photos/avatar_circle.png" alt="Avatar">
+          <h6>Patrick Petro</h6>
+          <button>
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Projects</span> 
+          </button>
+          <button>
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span> 
+          </button>
+          <button>
+              <i class="fa-brands fa-github"></i> 
+              <span>Github</span> 
+          </button>
+          <button>
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Resume</span> 
+          </button>
+          <button>
+              <i class="fa-solid fa-envelope"></i>
+              <span>Contact</span> 
+          </button>
+          <i class="fab fa-react icon"></i>
+          <i class="fab fa-angular icon"></i>
+          <i class="fab fa-html5 icon"></i> 
+          <i class="fab fa-css3 icon"></i>
+          <i class="fab fa-js-square icon"></i>
+          <i class="fab fa-bootstrap icon"></i>
+          <i class="fab fa-node icon"></i>
+          <i class="fab fa-npm icon"></i>
+          <i class="fab fa-python icon"></i>
+      </nav>
+    </aside>
+    <!-- End Side Menu -->
   </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
 
 
-<button class="contact">
-  <i class="fa-solid fa-circle-info fa-2x"></i>
-</button>
-
-
-
-
-
-
-<router-outlet></router-outlet>

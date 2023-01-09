@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="project-div" *ngFor="let project of projects">
+    <div class="card flip-card" (click)="flipProjectCard(project.id)">
+      <div id="{{ project.id }}" class="content">
+        <div class="front {{ project.id }}">
+            <h1>{{ project.name }}</h1>
+        </div>
+        <div class="back">
+          <div class="info">
+            <img src="../assets/photos/{{ project.image }}" class="card-img-top" alt="{{ project.name }} Screenshot">
+            <div class="card-body">
+              <p class="card-text">{{ project.description }}</p>
+            </div>   
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <a href="{{ project.gitHubRepoURL }}" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <div class="col">
+                <a href="{{ project.productionURL }}" target="_blank">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+<button class="contact">
+  <i class="fa-solid fa-circle-info fa-2x"></i>
+</button>
+  
+  
+  <div class="container">
+    <div class="carousel">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+    </div>
+  </div>
+  <div (click)="rotate('next')" >Next</div>
+  <div (click)="rotate('previous')">Prev</div>
+  
