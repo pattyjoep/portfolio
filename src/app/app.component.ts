@@ -10,6 +10,10 @@ export class AppComponent {
   
   sideMenuOpen = false;
 
+  onRouterOutletActivate(event : any) {
+    console.log(event);
+  }
+
 
   toggleSidebar(): void {
     console.log("open SideBar");

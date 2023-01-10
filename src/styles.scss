@@ -1,5 +1,5 @@
-// Roboto Font
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// Fonts: Poppins, Roboto, Sofia Sans, Ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sofia+Sans&family=Ubuntu&display=swap');
 
 // custom CSS variables file
 @import "scss/variables.scss";
@@ -11,6 +11,10 @@ html {
 body {
     font-family: $fontFamily;
     font-weight: $fontWeight;
+   
+    @media (width >= 500px) {
+        width: 90%;
+    }
 }
 
 button {
