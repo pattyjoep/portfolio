@@ -25,9 +25,10 @@ span {
 }
 
 .flip-card {
-    width: 200px;
-    height: 200px;
+    width: 75%;
+    height: 300px;
     background-color: transparent;
+    margin: auto;
 
     .content {
         position: relative;
@@ -44,6 +45,7 @@ span {
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             background-color: #1bc485;
+            padding: 20px;
         }
         
         .front {

@@ -11,10 +11,11 @@ html {
 body {
     font-family: $fontFamily;
     font-weight: $fontWeight;
-   
-    @media (width >= 500px) {
-        width: 90%;
-    }
+    color: #000000;
+
+    // @media (width >= 500px) {
+    //     width: 90%;
+    // }
 }
 
 button {
