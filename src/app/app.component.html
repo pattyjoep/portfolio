@@ -1,121 +1,85 @@
-<div class="container-fluid p-0">
-  <div class="row mx-0 p-0">
-    <div class="col-12 p-0">
+<nav class="top-nav">
+  <a href="#" (click)="toggleSidebar($event, true, 'mobile')">
+    <i class="fa-solid fa-bars fa-2x"></i>
+  </a>
+  
+  <img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image">
+  <h6>P. Petro</h6>
+ 
+</nav>
 
-      <nav class="navbar">
-        <div class="container-fluid p-0">
+<nav class="side-nav" [ngClass]="{ open: sideMenuOpen, collapsed: !sideMenuOpen, 'mobile-open': sideMenuOpenMobile }">
 
-          <!-- Hamburger Menu -->
-          <button class="menu-toggle" onclick="toggleSidebar()">
-            <i class="fa-solid fa-bars fa-2x"></i>
-          </button> <!-- End Hamburger Menu -->
+  <div class="side-nav-header">
+    <img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image">
+    <h6 *ngIf="sideMenuOpen">Patrick Petro</h6>
+    <h6 *ngIf="!sideMenuOpen">P. Petro</h6>
+  </div>
 
-          <div class="navbar-brand">
-            <img src="../../../assets/images/avatar_circle.png" alt="Avatar">
-            <h6>Patrick Petro</h6>
-          </div>
+  <ul class="side-nav-content">
+    <li>
+      <a href="">
+        <span class="side-nav-content-icon">
+          <i class="fa-solid fa-user"></i>
+        </span>
+        <span class="side-nav-content-text">
+          About
+        </span>
+      </a>
+      <a href="">
+        <span class="side-nav-content-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </span>
+        <span class="side-nav-content-text">
+          Portfolio
+        </span>
+      </a>
+      <a href="">
+        <span class="side-nav-content-icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </span>
+        <span class="side-nav-content-text">
+          LinkedIn
+        </span>
+      </a>
+      <a href="">
+        <span class="side-nav-content-icon">
+          <i class="fa-brands fa-github"></i> 
+        </span>
+        <span class="side-nav-content-text">
+          Github
+        </span>
+      </a>
+      <a href="">
+        <span class="side-nav-content-icon">
+          <i class="fa-solid fa-file-arrow-down"></i>
+        </span>
+        <span class="side-nav-content-text">
+          Resume
+        </span>
+      </a>
+    </li>
+  </ul>
 
-        </div>
-      </nav>
+  <div class="side-nav-footer">
+    <a *ngIf="sideMenuOpenMobile" href="#" (click)="toggleSidebar($event, false)">
+      <i class="fa-solid fa-circle-xmark fa-2x"></i>
+      
+    </a>
+    <a *ngIf="!sideMenuOpen" href="#" (click)="toggleSidebar($event, true)">
+      <i class="fa-solid fa-maximize"></i>
+    </a>
+  </div>
 
-      <!-- Side Menu -->
-      <aside id="sideMenu" class="side-menu" [ngClass]="{ 'open': sideMenuOpen === true }">
-        <nav>
-          <div class="row mx-0 p-0">
-            <div class="col-12 p-0 mb-3">
-              <img src="../../../assets/images/avatar_circle.png" alt="Avatar">
-              <h6>Patrick Petro</h6>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                  <div class="col button-text">
-                    <span>About</span> 
-                  </div>
-                </div> 
-              </button>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-solid fa-laptop-code"></i>
-                  </div>
-                  <div class="col button-text">
-                    <span>Portfolio</span> 
-                  </div>
-                </div> 
-                
-                
-              </button>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </div>
-                  <div class="col button-text">
-                    <span>LinkedIn</span> 
-                  </div>
-                </div> 
-              </button>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-brands fa-github"></i> 
-                  </div>
-                  <div class="col button-text">    
-                    <span>Github</span> 
-                  </div>
-                </div> 
-              </button>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                  </div>
-                  <div class="col button-text">
-                    <span>Resume</span> 
-                  </div>
-                </div> 
-              </button>
-            </div>
-            <div class="col-12 p-0">
-              <button>
-                <div class="row mx-0 p-0">
-                  <div class="col-4 button-icon">
-                    <i class="fa-solid fa-envelope"></i>
-                 
-                  </div>
-                  <div class="col button-text">
-                    <span>Contact</span>
-                  </div>
-                </div> 
-              </button>
-            </div>
-           
-          </div>
-
-          <div class="row mx-0 p-0">
-            <div class="col-12 p-0">
-              <button>
-                <i class="fa-solid fa-circle-xmark fa-2x m-auto"></i>
-              </button>
-            </div>
-          </div>
-
-        </nav>
-      </aside> <!-- End Side Menu -->
+</nav>
 
 
+<div class="main-content" [ngClass]="{ 'side-menu-open': sideMenuOpen, 'side-menu-collapsed': !sideMenuOpen }">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
+      </div>
     </div>
   </div>
 </div>
@@ -123,26 +87,11 @@
 
 
 
-<!-- <div class="row mx-0 p-0"> -->
-  <div class="main-content-div">
-    <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
 
-    <footer>
-      Footer Text
-      <!-- <p>
-        <i class="fab fa-react icon"></i>
-        <i class="fab fa-angular icon"></i>
-        <i class="fab fa-html5 icon"></i> 
-        <i class="fab fa-css3 icon"></i>
-        <i class="fab fa-js-square icon"></i>
-        <i class="fab fa-bootstrap icon"></i>
-        <i class="fab fa-node icon"></i>
-        <i class="fab fa-npm icon"></i>
-        <i class="fab fa-python icon"></i>
-      </p> -->
-    </footer>
-  </div>
-<!-- </div> -->
+
+
+
+
 
 
 

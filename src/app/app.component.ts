@@ -8,16 +8,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  sideMenuOpen = false;
+  sideMenuOpen = true;
+  sideMenuOpenMobile = false;
 
   onRouterOutletActivate(event : any) {
     console.log(event);
   }
 
 
-  toggleSidebar(): void {
-    console.log("open SideBar");
-    this.sideMenuOpen = true;
+  toggleSidebar(event: Event, boolean: boolean, platform?: string): void {
+    event.preventDefault();
+    console.log("toggle SideBar");
+    // this.sideMenuOpen = boolean;
+
+    this.sideMenuOpenMobile = boolean;
+
+    // if (platform === "mobile") {
+    //   this.sideMenuOpenMobile = boolean;
+    // }
+
   }
 
 }

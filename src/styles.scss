@@ -13,21 +13,25 @@ body {
     font-weight: $fontWeight;
     color: #000000;
 
+
+
+    // background-image: url("assets/images/background.jpg");
+    // background-size: 100% auto;
+    // background-position: top center;
+    // background-repeat: no-repeat;
+
     // @media (width >= 500px) {
     //     width: 90%;
     // }
 }
 
-button {
 
-
-    &.contact {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: auto;
-    }
-
+.mdc-tab {
+    background-color: transparent;;
+    color: #dddddd;
 }
 
-
+.mdc-tab--active {
+    background-color: #0e213714;
+    color: #0e2137;
+}
