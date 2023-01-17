@@ -1,3 +1,116 @@
-.card {
+.project-card {
     border: none;
+
+    .card-body {
+        position: relative;
+
+        .card-footer {
+            background-color: transparent;
+            border: none;
+        }
+    }
 }
+
+a {
+    color: #0e2137;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+
+ 
+}
+
+hr {
+    border-top: 2px solid #0e2137;
+    opacity: .25;
+    margin: 1rem auto;
+}
+
+.components {
+   position: relative;
+
+    .card {
+        margin: 0.5rem auto;
+
+        &.login-signup {
+            @keyframes panBg {
+                100% { background-position: 15% 50%; }
+            }
+            height: 300px;
+            background-image: url("../../../assets/images/components/loginSignup/component_login_signup_background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: panBg 6s infinite alternate linear;
+
+            .flip-card {
+                border: none;
+                border-radius: 10px;
+                height: 100%;
+                margin: 0rem;
+
+                .content {
+                    height: 100%;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.5s;
+                    transform-style: preserve-3d;
+                    border-radius: 5px;
+
+                    .front,
+                    .back {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 5px;
+                        backface-visibility: hidden;
+                        background-color: #ffffff;
+                        padding: 10px;
+                    }
+
+                    .front {
+                
+                        h1 {
+                            font-size: 20px;
+                            margin: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                
+                    }
+                
+                    .back {
+                        transform: rotateY(180deg);
+                        text-align: left;
+            
+                        img {
+                            width: 100%
+                        }
+                
+                    }
+
+                    .card-footer {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        left: 0;
+                        background-color: transparent;
+                        border: none;
+                    }
+                
+
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+
