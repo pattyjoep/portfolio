@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-
-
-
 export interface Project {
   id: string;
   name: string;
@@ -13,17 +9,12 @@ export interface Project {
   productionURL?: string;
 }
 
-export interface IndividualComponent {
-  id: string;
-  name: string;
-}
-
 @Component({
-  selector: 'app-porfolio',
-  templateUrl: './porfolio.component.html',
-  styleUrls: ['./porfolio.component.scss']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
-export class PorfolioComponent {
+export class ProjectsComponent {
 
   projects: Project[] = [
     {
@@ -58,42 +49,23 @@ export class PorfolioComponent {
       gitHubRepoURL: "https://github.com/pjpetro/WeatherDash",
       productionURL: "https://pjpetro.github.io/WeatherDash/"
     },
-
-    // 
   ]
-
   projectsSorted: Project[] = []
-
-  individualComponents: IndividualComponent[] = [
-    {
-      id: "LoginSignUpPage",
-      name: "Login/Sign-up Page",
-      
-    },
-
-  ]
-
+  
   constructor(
 
   ) {
+  
+     
+  }
 
-
+  ngOnInit(): void {
     this.projectsSorted = this.projects.sort( (a, b) => {
       return a.name.localeCompare(b.name);
     } )
   }
 
 
-
-
-  flipLoginCard(projectID: string): void {
-    const id = document.getElementById(projectID) as HTMLDivElement;
-    if (id.classList.contains("flipped")) {
-      id.classList.remove("flipped");
-    } else {
-      id.classList.add("flipped");
-    }
-  }
 
 
 }
