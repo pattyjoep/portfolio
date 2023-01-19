@@ -1,97 +1,70 @@
 <nav class="top-nav">
-  <a href="#" (click)="toggleSidebar($event, true, 'mobile')">
-    <i class="fa-solid fa-bars fa-2x"></i>
-  </a>
-  
-  <img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image">
-  <h6>P. Petro</h6>
- 
+	<a href="#" (click)="toggleSidebar($event, true, 'mobile')">
+		<i class="fa-solid fa-bars fa-2x"></i>
+	</a>
+
+	<img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image" />
+	<h6>P. Petro</h6>
 </nav>
 
-<nav class="side-nav" [ngClass]="{ open: sideMenuOpen, collapsed: !sideMenuOpen, 'mobile-open': sideMenuOpenMobile }">
+<nav class="side-nav" [ngClass]="{open: sideMenuOpen, collapsed: !sideMenuOpen, 'mobile-open': sideMenuOpenMobile}">
+	<div class="side-nav-header">
+		<img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image" />
+		<h6 *ngIf="sideMenuOpen">Patrick Petro</h6>
+		<h6 *ngIf="!sideMenuOpen">P. Petro</h6>
+	</div>
 
-  <div class="side-nav-header">
-    <img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image">
-    <h6 *ngIf="sideMenuOpen">Patrick Petro</h6>
-    <h6 *ngIf="!sideMenuOpen">P. Petro</h6>
-  </div>
+	<ul class="side-nav-content">
+		<li>
+			<a href="/about">
+				<span class="side-nav-content-icon">
+					<i class="fa-solid fa-user"></i>
+				</span>
+				<span class="side-nav-content-text"> About </span>
+			</a>
+			<a href="/portfolio">
+				<span class="side-nav-content-icon">
+					<i class="fa-solid fa-laptop-code"></i>
+				</span>
+				<span class="side-nav-content-text"> Portfolio </span>
+			</a>
+			<a href="https://github.com/pjpetro" target="_blank">
+				<span class="side-nav-content-icon">
+					<i class="fa-brands fa-github"></i>
+				</span>
+				<span class="side-nav-content-text"> Github </span>
+			</a>
+			<a href="https://www.linkedin.com/in/patrickjpetro/" target="_blank">
+				<span class="side-nav-content-icon">
+					<i class="fa-brands fa-linkedin"></i>
+				</span>
+				<span class="side-nav-content-text"> LinkedIn </span>
+			</a>
+			<a href="">
+				<span class="side-nav-content-icon">
+					<i class="fa-solid fa-file-arrow-down"></i>
+				</span>
+				<span class="side-nav-content-text"> Resume </span>
+			</a>
+		</li>
+	</ul>
 
-  <ul class="side-nav-content">
-    <li>
-      <a href="/about">
-        <span class="side-nav-content-icon">
-          <i class="fa-solid fa-user"></i>
-        </span>
-        <span class="side-nav-content-text">
-          About
-        </span>
-      </a>
-      <a href="/portfolio">
-        <span class="side-nav-content-icon">
-          <i class="fa-solid fa-laptop-code"></i>
-        </span>
-        <span class="side-nav-content-text">
-          Portfolio
-        </span>
-      </a>
-      <a href="https://github.com/pjpetro" target="_blank">
-        <span class="side-nav-content-icon">
-          <i class="fa-brands fa-github"></i> 
-        </span>
-        <span class="side-nav-content-text">
-          Github
-        </span>
-      </a>
-      <a href="https://www.linkedin.com/in/patrickjpetro/" target="_blank">
-        <span class="side-nav-content-icon">
-          <i class="fa-brands fa-linkedin"></i>
-        </span>
-        <span class="side-nav-content-text">
-          LinkedIn
-        </span>
-      </a>
-      <a href="">
-        <span class="side-nav-content-icon">
-          <i class="fa-solid fa-file-arrow-down"></i>
-        </span>
-        <span class="side-nav-content-text">
-          Resume
-        </span>
-      </a>
-    </li>
-  </ul>
-
-  <div class="side-nav-footer">
-    <a *ngIf="sideMenuOpenMobile" href="#" (click)="toggleSidebar($event, false)">
-      <i class="fa-solid fa-circle-xmark fa-2x"></i>
-      
-    </a>
-    <a *ngIf="!sideMenuOpen" href="#" (click)="toggleSidebar($event, true)">
-      <i class="fa-solid fa-maximize"></i>
-    </a>
-  </div>
-
+	<div class="side-nav-footer">
+		<a *ngIf="sideMenuOpenMobile" href="#" (click)="toggleSidebar($event, false)">
+			<i class="fa-solid fa-circle-xmark fa-2x"></i>
+		</a>
+		<a *ngIf="!sideMenuOpen" href="#" (click)="toggleSidebar($event, true)">
+			<i class="fa-solid fa-maximize"></i>
+		</a>
+	</div>
 </nav>
 
-
-<div class="main-content" [ngClass]="{ 'side-menu-open': sideMenuOpen, 'side-menu-collapsed': !sideMenuOpen }">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
-      </div>
-    </div>
-  </div>
+<div class="main-content" [ngClass]="{'side-menu-open': sideMenuOpen, 'side-menu-collapsed': !sideMenuOpen}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-

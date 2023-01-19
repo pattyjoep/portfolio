@@ -1,34 +1,37 @@
 <div class="projects">
-  <div class="row mx-0 p-0" *ngFor="let project of projectsSorted">
-      <div class="col-12">
-          <div class="card project-card">
-              <div class="card-body">
-                  <div class="row">
-                      <div class="col-12 col-md-6 p-0">
-                          <h3>{{ project.name }}</h3>
-                          <p>{{ project.description }}</p>
-                          <div class="card-footer">
-                              <div class="row">
-                                  <div class="col-6 text-center">
-                                      <a href="{{ project.gitHubRepoURL }}" target="_blank">
-                                          <i class="fa-brands fa-github"></i> Repo 
-                                      </a>
-                                  </div>
-                                  <div class="col-6 text-center">
-                                      <a href="{{ project.productionURL }}" target="_blank">
-                                          <i class="fa-solid fa-up-right-from-square"></i> Try it Out 
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-12 col-md-6 p-0">
-                          <img src="../../../assets/images/project_screenshots/{{ project.image }}" class="img-fluid" alt="{{ project.image }} Screenshot">
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <hr />
-      </div>
-  </div>
+	<div class="row mx-0 p-0" *ngFor="let project of projectsSorted">
+		<div class="col-12">
+			<div class="card project-card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-12 col-md-6 p-0">
+							<h3>{{ project.name }}</h3>
+							<p>{{ project.description }}</p>
+							<div class="card-footer">
+								<div class="row">
+									<div class="col-6 text-center">
+										<a href="{{ project.gitHubRepoURL }}" target="_blank">
+											<i class="fa-brands fa-github"></i> Repo
+										</a>
+									</div>
+									<div class="col-6 text-center">
+										<a href="{{ project.productionURL }}" target="_blank">
+											<i class="fa-solid fa-up-right-from-square"></i> Try it Out
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 p-0">
+							<img
+								src="../../../assets/images/project_screenshots/{{ project.image }}"
+								class="img-fluid"
+								alt="{{ project.image }} Screenshot" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+		</div>
+	</div>
 </div>
