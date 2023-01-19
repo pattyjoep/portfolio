@@ -1,27 +1,25 @@
 .project-card {
-  border: none;
+	border: none;
 
-  .card-body {
-      position: relative;
+	.card-body {
+		position: relative;
 
-      .card-footer {
-          background-color: transparent;
-          border: none;
-      }
-  }
+		.card-footer {
+			background-color: transparent;
+			border: none;
+		}
+	}
 }
 
 a {
-  color: #0e2137;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 5px;
-
-
+	color: #0e2137;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 5px;
 }
 
 hr {
-  border-top: 2px solid #0e2137;
-  opacity: .25;
-  margin: 1rem auto;
+	border-top: 2px solid #0e2137;
+	opacity: 0.25;
+	margin: 1rem auto;
 }

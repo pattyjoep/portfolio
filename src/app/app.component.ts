@@ -1,32 +1,27 @@
-import { Component } from '@angular/core';
-
+import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  
-  sideMenuOpen = true;
-  sideMenuOpenMobile = false;
+	sideMenuOpen = true;
+	sideMenuOpenMobile = false;
 
-  onRouterOutletActivate(event : any) {
-    console.log(event);
-  }
+	onRouterOutletActivate(event: any) {
+		console.log(event);
+	}
 
+	toggleSidebar(event: Event, boolean: boolean, platform?: string): void {
+		event.preventDefault();
+		console.log("toggle SideBar");
+		// this.sideMenuOpen = boolean;
 
-  toggleSidebar(event: Event, boolean: boolean, platform?: string): void {
-    event.preventDefault();
-    console.log("toggle SideBar");
-    // this.sideMenuOpen = boolean;
+		this.sideMenuOpenMobile = boolean;
 
-    this.sideMenuOpenMobile = boolean;
-
-    // if (platform === "mobile") {
-    //   this.sideMenuOpenMobile = boolean;
-    // }
-
-  }
-
+		// if (platform === "mobile") {
+		//   this.sideMenuOpenMobile = boolean;
+		// }
+	}
 }

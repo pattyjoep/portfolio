@@ -1,200 +1,183 @@
 .top-nav {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    transition: 0.5s;
-    color: #ffffff;
-    background-color: #0e2137;
-    padding: 5px;
-    margin-bottom: 0.5rem;
-    box-shadow: 0px 0px 5px 0px gray;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	width: 100%;
+	transition: 0.5s;
+	color: #ffffff;
+	background-color: #0e2137;
+	padding: 5px;
+	margin-bottom: 0.5rem;
+	box-shadow: 0px 0px 5px 0px gray;
 
-    a {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: #ffffff;
-    }
+	a {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		color: #ffffff;
+	}
 
-    img {
-        display: block;
-        width: 40px;
-        margin: auto;
-    }
+	img {
+		display: block;
+		width: 40px;
+		margin: auto;
+	}
 
-    h6 {
-        position: absolute;
-        right: 5px;
-        top: 15px;
-    }
+	h6 {
+		position: absolute;
+		right: 5px;
+		top: 15px;
+	}
 
+	@media (width > 500px) {
+		translate: -100% 0;
+		margin-bottom: 0;
+		box-shadow: none;
 
-    @media (width > 500px) {
-        translate: -100% 0;
-        margin-bottom: 0;
-        box-shadow: none;
-        
-        a, img, h6 {
-            display: none;
-        }
-    }
+		a,
+		img,
+		h6 {
+			display: none;
+		}
+	}
 }
 
-
-
 .side-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9999;
-    width: 150px;
-    transition: 0.5s;
-    color: #ffffff;
-    background-color: #0e2137;
-    box-shadow: 0px 0px 5px 0px gray;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 9999;
+	width: 150px;
+	transition: 0.5s;
+	color: #ffffff;
+	background-color: #0e2137;
+	box-shadow: 0px 0px 5px 0px gray;
 
-    a {
-        color: #ffffff;
-    }
+	a {
+		color: #ffffff;
+	}
 
-    .side-nav-header {
-        position: relative;
+	.side-nav-header {
+		position: relative;
 
-        img {
-            display: block;
-            width: 75px;
-            margin: 0.5rem auto;   
-        }
+		img {
+			display: block;
+			width: 75px;
+			margin: 0.5rem auto;
+		}
 
-        h6 {
-            position: absolute;
-            bottom: -5px;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            background-color: #25557c;
-            margin: 0rem auto 0;
-            border-radius: 0;
-        }
-    }
+		h6 {
+			position: absolute;
+			bottom: -5px;
+			width: 100%;
+			text-align: center;
+			font-size: 14px;
+			background-color: #25557c;
+			margin: 0rem auto 0;
+			border-radius: 0;
+		}
+	}
 
-    .side-nav-content {
-        margin-top: 2rem;
-        padding: 0;
-        list-style: none;
+	.side-nav-content {
+		margin-top: 2rem;
+		padding: 0;
+		list-style: none;
 
-        li {
+		li {
+			a {
+				display: block;
+				padding-top: 10px;
+				padding-left: 25px;
+				text-align: left;
+				height: 45px;
+				text-decoration: none;
 
-            a {
-                display: block;
-                padding-top: 10px;
-                padding-left: 25px;
-                text-align: left;
-                height: 45px;
-                text-decoration: none;
+				.side-nav-content-icon {
+					position: relative;
+					top: 0;
+					margin-right: 0.5rem;
+				}
 
-                .side-nav-content-icon {
-                    position: relative;
-                    top: 0;
-                    margin-right: 0.5rem;
-                }
+				.side-nav-content-text {
+					&.collapsed {
+						display: none;
+					}
+				}
 
-                .side-nav-content-text {
+				&:hover {
+					background-color: #ffffff3e;
+				}
+			}
+		}
+	}
 
-                    &.collapsed {
-                        display: none;
-                    }
-                    
-                }
+	.side-nav-footer {
+		position: absolute;
+		bottom: 50px;
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
 
-                &:hover {
-                    background-color: #ffffff3e;
-                }
+	&.collapsed {
+		width: 70px;
 
-            }
-        }
-    }
+		.side-nav-header {
+			img {
+				width: 45px;
+			}
 
-    .side-nav-footer {
-        position: absolute;
-        bottom: 50px;
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
+			h6 {
+				font-size: 12px;
+			}
+		}
 
-    &.collapsed {
-        width: 70px;
+		.side-nav-content {
+			li {
+				a {
+					text-align: center;
+					padding: 10px;
+					margin-top: 0.5rem;
 
-        .side-nav-header {
+					.side-nav-content-icon {
+						margin-right: 0;
+					}
 
-            img {
-                width: 45px;
-            }
+					.side-nav-content-text {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 
-            h6 {
-                font-size: 12px; 
-            }
-           
+	&.mobile-open {
+		translate: 0 0;
+		width: 100%;
+	}
 
-        }
+	@media (width < 500px) {
+		translate: -100% -100%;
+		margin-bottom: 0;
+		box-shadow: none;
+	}
 
-        .side-nav-content {
-
-            li {
-
-                a {
-                    text-align: center;
-                    padding: 10px;
-                    margin-top: 0.5rem;
-                
-                    .side-nav-content-icon {
-                        margin-right: 0;
-                    }
-
-                    .side-nav-content-text {
-                        display: none; 
-                    }
-                }
-        
-              
-            }
-        }
-    }
-
-    &.mobile-open {
-        translate: 0 0;
-        width: 100%;
-    }
-
-    @media (width < 500px) {
-        translate: -100% -100%;
-        margin-bottom: 0;
-        box-shadow: none;
-        
-    }
-
-    @media (width > 500px) {
-        // translate: -100% 0;
-          
-    }
-   
+	@media (width > 500px) {
+		// translate: -100% 0;
+	}
 }
 
 .main-content {
-    margin-left: 150px;
-    padding: 0;
+	margin-left: 150px;
+	padding: 0;
 
-    &.side-menu-collapsed {
-        margin-left: 70px;
-    }
+	&.side-menu-collapsed {
+		margin-left: 70px;
+	}
 
-    @media (width < 500px) {
-        margin-left: 0 !important;
-        padding: 0;
-        
-    }
-
+	@media (width < 500px) {
+		margin-left: 0 !important;
+		padding: 0;
+	}
 }
