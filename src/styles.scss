@@ -1,5 +1,10 @@
+@use "@angular/material" as material;
+
 // Fonts: Poppins, Roboto, Sofia Sans, Ubuntu
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sofia+Sans&family=Ubuntu&display=swap');
+
+@import "../node_modules/@angular/material/theming";
+@include material.core();
 
 // custom CSS variables file
 @import "scss/variables.scss";
@@ -11,20 +16,36 @@ html {
 body {
     font-family: $fontFamily;
     font-weight: $fontWeight;
-    color: #0e2137;
-
-    // @media (width >= 500px) {
-    //     width: 90%;
-    // }
+    color: $colorText;
+    background-color: $colorBackground;
 }
 
 
-.mdc-tab {
-    background-color: transparent;;
-    color: #dddddd;
+// tabs on Portfolio Component
+mat-tab-header {
+    position: sticky !important;
+    top: 50px;
+    z-index: 2;
+    background-color: #ffffff;
+
+    @media (width >= 500px) {
+        top: 0;
+    }
+
+    .mat-mdc-tab-labels {
+        
+        @media (width >= 500px) {
+            width: 350px;
+            margin: auto;
+        }
+    }
+    
+    .mdc-tab {
+        color: $colorButtonText;
+        background-color: $colorButtonBackground;;
+    }
+    .mdc-tab--active {
+        background-color: #f2f2f2;
+    }
 }
 
-.mdc-tab--active {
-    background-color: #0e213714;
-    color: #0e2137;
-}

@@ -1,7 +1,7 @@
 .top-nav {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     transition: 0.5s;
     color: #ffffff;
@@ -48,7 +48,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 9999;
     width: 150px;
     transition: 0.5s;
     color: #ffffff;

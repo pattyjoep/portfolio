@@ -3,5 +3,10 @@ $fontFamily: "Ubuntu", sans-serif;
 $fontWeight: 500;
 
 /*** Theme Colors ***/
-$colorText: #000000;
+$colorText: #0e2137;
 $colorBackground: #ffffff;
+
+/*** Buttons & Links ***/
+$colorButtonText: $colorText;
+$colorButtonBackground: #cae3ff;
+
