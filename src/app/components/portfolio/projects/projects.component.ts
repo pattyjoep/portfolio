@@ -62,4 +62,14 @@ export class ProjectsComponent {
 			return a.name.localeCompare(b.name);
 		});
 	}
+
+	routeToGitHubRepoURL(url: string): void {
+		window.open(url)
+	}
+
+	routeToProductionURL(url: string): void {
+		window.open(url)
+	}
+
+	
 }
