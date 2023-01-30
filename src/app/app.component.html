@@ -7,7 +7,7 @@
 	<h6>P. Petro</h6>
 </nav>
 
-<nav class="side-nav" [ngClass]="{open: sideMenuOpen, collapsed: !sideMenuOpen, 'mobile-open': sideMenuOpenMobile}">
+<nav class="side-nav" [ngClass]="{ open: sideMenuOpen, collapsed: !sideMenuOpen, 'mobile-open': sideMenuOpenMobile }">
 	<div class="side-nav-header">
 		<img src="../assets/images/avatar_circle.png" class="profile-image" alt="Avatar Image" />
 		<h6 *ngIf="sideMenuOpen">Patrick Petro</h6>
@@ -59,7 +59,7 @@
 	</div>
 </nav>
 
-<div class="main-content" [ngClass]="{'side-menu-open': sideMenuOpen, 'side-menu-collapsed': !sideMenuOpen}">
+<div class="main-content" [ngClass]="{ 'side-menu-open': sideMenuOpen, 'side-menu-collapsed': !sideMenuOpen }">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
