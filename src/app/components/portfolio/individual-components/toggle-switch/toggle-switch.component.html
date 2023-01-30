@@ -1,0 +1,16 @@
+<h4 class="text-center">Toggle Switch</h4>
+<div class="card component-card toggle-switch">
+    <div class="card-body text-center">
+        <div class="effects">
+            <input id="enableRollEffect" type="checkbox" (click)="evaluateForm('roll')" /> 
+            <label for="enableRollEffect">Enable Roll Effect</label>
+        </div>
+       
+        <div class="toggle-div">
+            <input id="toggleSwitch" type="checkbox" />
+            <label for="toggleSwitch">
+                <div class="toggle-switch-status" [ngClass]="{ roll: effectForm.controls.rollEnabled.value === true }" ></div>
+            </label>
+        </div>
+    </div>
+</div>

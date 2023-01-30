@@ -20,6 +20,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { ToggleSwitchComponent } from './components/portfolio/individual-components/toggle-switch/toggle-switch.component';
 
 @NgModule({
 	declarations: [
@@ -29,6 +30,7 @@ import {MatInputModule} from "@angular/material/input";
 		PageNotFoundComponent,
 		PortfolioComponent,
 		LoginSignupPageComponent,
+  ToggleSwitchComponent,
 	],
 	imports: [
 		BrowserModule,
