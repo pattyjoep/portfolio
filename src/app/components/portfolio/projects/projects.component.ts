@@ -64,12 +64,10 @@ export class ProjectsComponent {
 	}
 
 	routeToGitHubRepoURL(url: string): void {
-		window.open(url)
+		window.open(url);
 	}
 
 	routeToProductionURL(url: string): void {
-		window.open(url)
+		window.open(url);
 	}
-
-	
 }

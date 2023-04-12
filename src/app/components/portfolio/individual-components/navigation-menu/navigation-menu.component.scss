@@ -1,116 +1,108 @@
 .menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    width: 200px;
-    height: 100%;
-    margin: 0rem auto 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	width: 200px;
+	height: 100%;
+	margin: 0rem auto 0;
 
-    .menu-toggle {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: grid;
-        place-items: center;
-        width: 60px;
-        height: 60px;
-        border: none;
-        border-radius: 50%;
-        background-color: #1968b7;
-        box-shadow: 0 3px 6px gray;
-        z-index: 5;
-        margin: 6rem auto 0;
-        cursor: pointer;
+	.menu-toggle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: grid;
+		place-items: center;
+		width: 60px;
+		height: 60px;
+		border: none;
+		border-radius: 50%;
+		background-color: #1968b7;
+		box-shadow: 0 3px 6px gray;
+		z-index: 5;
+		margin: 6rem auto 0;
+		cursor: pointer;
 
-        &.open {
+		&.open {
+			span {
+				transform: rotate(360deg);
 
-            span {
-                transform: rotate(360deg);
+				&.menu-icon {
+					font-size: 0px;
+				}
+				&.menu-close-icon {
+					font-size: 25px;
+				}
+			}
+		}
 
-                &.menu-icon {
-                    font-size: 0px;
-                }
-                &.menu-close-icon {
-                    font-size: 25px;
-                }
-            }
-        }
+		span {
+			position: absolute;
+			color: #ffffff;
+			transition: 0.5s;
 
-        span {
-            position: absolute;
-            color: #ffffff;
-            transition: 0.5s;
+			&.menu-icon {
+				font-size: 25px;
+			}
+			&.menu-close-icon {
+				font-size: 0px;
+			}
+		}
+	}
 
-            &.menu-icon {
-                font-size: 25px;
-            }
-            &.menu-close-icon {
-                font-size: 0px;
-            }
-        }
-    
-    }
+	.menu-list {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 3;
+		list-style: none;
+		margin: 0;
 
-    .menu-list {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-        list-style: none;
-        margin: 0;
+		&.open {
+			.menu-item {
+				&:nth-of-type(1) {
+					top: 58px;
+					right: 85px;
+					transition-delay: 0.2s;
+				}
+				&:nth-of-type(2) {
+					top: 70px;
+					right: 125px;
+					transition-delay: 0.3s;
+				}
+				&:nth-of-type(3) {
+					right: 140px;
+					transition-delay: 0.1s;
+				}
+				&:nth-of-type(4) {
+					right: 30px;
+					transition-delay: 0.4s;
+				}
+				&:nth-of-type(5) {
+					top: 70px;
+					right: 45px;
+					transition-delay: 0.5s;
+				}
+			}
+		}
 
-        &.open {
-
-            .menu-item {
-
-                &:nth-of-type(1) {
-                    top: 58px;
-                    right: 85px;
-                    transition-delay: 0.2s;
-                }
-                &:nth-of-type(2) {
-                    top: 70px;
-                    right: 125px;
-                    transition-delay: 0.3s;
-                }
-                &:nth-of-type(3) {
-                    right: 140px;
-                    transition-delay: 0.1s;
-                }
-                &:nth-of-type(4) {
-                    right: 30px;
-                    transition-delay: 0.4s;
-                }
-                &:nth-of-type(5) {
-                    top: 70px;
-                    right: 45px;
-                    transition-delay: 0.5s;
-                }
-            }
-
-        }
-
-        .menu-item {
-            position: absolute;
-            top: 110px;
-            right: 80px;
-            bottom: 0rem;
-            width: 30px;
-            height: 30px;
-            border: none;
-            border-radius: 50%;
-            box-shadow: 0px 0px 5px gray;
-            place-items: center;
-            transition: 0.5s;
-            cursor: pointer;
-
-        }
-
-    }
-
+		.menu-item {
+			position: absolute;
+			top: 110px;
+			right: 80px;
+			bottom: 0rem;
+			width: 30px;
+			height: 30px;
+			border: none;
+			border-radius: 50%;
+			box-shadow: 0px 0px 5px gray;
+			place-items: center;
+			transition: 0.5s;
+			cursor: pointer;
+		}
+	}
 }

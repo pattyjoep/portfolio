@@ -1,21 +1,20 @@
 <div class="individual-components">
-    <div class="row mx-0 p-0">
-        <div class="col-12 col-md-6 col-lg-4 m-auto mt-3" *ngFor="let individualComponent of individualComponentsSorted">
-            <div class="card individual-component-card">
-                <div class="card-body">
-                    
-                    <!-- <app-{{individualComponent.selector}}></app-{{individualComponent.selector}}> -->
-                    <!-- <app-login-signup-page *ngIf="individualComponent.id === 'loginSignUpPage'"></app-login-signup-page> -->
-                    <app-navigation-menu *ngIf="individualComponent.id === 'navigationMenu'"></app-navigation-menu>
+	<div class="row mx-0 p-0">
+		<div
+			class="col-12 col-md-6 col-lg-4 m-auto mt-3"
+			*ngFor="let individualComponent of individualComponentsSorted">
+			<div class="card individual-component-card">
+				<div class="card-body">
+					<!-- <app-{{individualComponent.selector}}></app-{{individualComponent.selector}}> -->
+					<!-- <app-login-signup-page *ngIf="individualComponent.id === 'loginSignUpPage'"></app-login-signup-page> -->
+					<app-navigation-menu *ngIf="individualComponent.id === 'navigationMenu'"></app-navigation-menu>
 
-                    <app-toggle-switch *ngIf="individualComponent.id === 'toggleSwitch'"></app-toggle-switch>
-
-
-                </div>
-                <div class="card-footer text-center">
-                    <h4>{{ individualComponent.name }}</h4>
-                </div>
-            </div>
-        </div>
-    </div>
+					<app-toggle-switch *ngIf="individualComponent.id === 'toggleSwitch'"></app-toggle-switch>
+				</div>
+				<div class="card-footer text-center">
+					<h4>{{ individualComponent.name }}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

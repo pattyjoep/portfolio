@@ -9,7 +9,7 @@ import { AboutComponent } from "./components/about/about.component";
 // portfolio
 import { PortfolioComponent } from "./components/portfolio/portfolio.component";
 import { ProjectsComponent } from "./components/portfolio/projects/projects.component";
-import { IndividualComponentsComponent } from './components/portfolio/individual-components/individual-components.component'
+import { IndividualComponentsComponent } from "./components/portfolio/individual-components/individual-components.component";
 import { LoginSignupPageComponent } from "./components/portfolio/individual-components/login-signup-page/login-signup-page.component";
 import { ToggleSwitchComponent } from "./components/portfolio/individual-components/toggle-switch/toggle-switch.component";
 
@@ -22,8 +22,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { NavigationMenuComponent } from './components/portfolio/individual-components/navigation-menu/navigation-menu.component';
-
+import { NavigationMenuComponent } from "./components/portfolio/individual-components/navigation-menu/navigation-menu.component";
 
 @NgModule({
 	declarations: [
@@ -34,8 +33,8 @@ import { NavigationMenuComponent } from './components/portfolio/individual-compo
 		PortfolioComponent,
 		LoginSignupPageComponent,
 		ToggleSwitchComponent,
-  		IndividualComponentsComponent,
-    NavigationMenuComponent,
+		IndividualComponentsComponent,
+		NavigationMenuComponent,
 	],
 	imports: [
 		BrowserModule,
