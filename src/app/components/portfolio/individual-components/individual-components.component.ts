@@ -28,7 +28,7 @@ export class IndividualComponentsComponent {
     {
 			id: "navigationMenu",
 			name: "Navigation Menu",
-			selector:""
+			selector:"app-navigation-menu"
 		},
 
   ]

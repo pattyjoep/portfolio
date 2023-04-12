@@ -1,0 +1,19 @@
+<div class="menu">
+    <button class="menu-toggle" [ngClass]="{ open: menuOpen }" (click)="toggleMenu()">
+        <span class="menu-icon">
+            <i class="fa-solid fa-bars"></i> 
+        </span>
+        <span class="menu-close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+    </button>
+    <ul class="menu-list" [ngClass]="{ open: menuOpen }">
+        <button *ngFor="let item of menuOptions" class="menu-item {{ item.key }}">
+            <i *ngIf="item.key === 'home'" class="fa-solid fa-house"></i>
+            <i *ngIf="item.key === 'user'" class="fa-solid fa-user"></i>
+            <i *ngIf="item.key === 'settings'" class="fa-solid fa-gear"></i>
+            <i *ngIf="item.key === 'share'" class="fa-solid fa-share"></i>
+            <i *ngIf="item.key === 'search'" class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </ul>
+</div>

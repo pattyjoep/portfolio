@@ -22,6 +22,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { NavigationMenuComponent } from './components/portfolio/individual-components/navigation-menu/navigation-menu.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MatInputModule } from "@angular/material/input";
 		LoginSignupPageComponent,
 		ToggleSwitchComponent,
   		IndividualComponentsComponent,
+    NavigationMenuComponent,
 	],
 	imports: [
 		BrowserModule,
